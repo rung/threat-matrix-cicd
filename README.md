@@ -69,8 +69,6 @@ This matrix was created by Mercari Security Team, and reviewed by Platform Team.
 
 <li>(CI, CD) Audit Logging of the activities
 
-<li>(CI, CD) Limit egress connection via Proxy and IP Restriction
-
 <li>(CI, CD) Security Monitoring using IDS/IPS, and EDR
 
 <li>(CI, CD) Check each tool’s Integrity
