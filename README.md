@@ -11,12 +11,13 @@ To map the threat of CI/CD Pipeline, I use the same classification as the framew
 - [Techniques and Mitigation](#techniques-and-mitigation)
     - [Initial Access](#initial-access)
     - [Execution](#execution)
+    - [Execution (Production)](#execution-production)
     - [Persistence](#persistence)
     - [Privilege Escalation](#privilege-escalation)
     - [Defense Evasion](#defense-evasion)
     - [Credential Access](#credential-access)
     - [Lateral Movement](#lateral-movement)
-    - [Command and Control/Exfiltration](#command-and-controlexfiltration)
+    - [Exfiltration](#exfiltration)
     - [Impact](#impact)
 - [Common Question](#common-question)
     - [Supply-chain attacks are the only risk of CI/CD pipeline, correct?](#supply-chain-attacks-are-the-only-risk-of-cicd-pipeline-correct)
@@ -258,6 +259,70 @@ File inclusion: file Function
 <li>(CI, CD) Implement strict access control to CI/CD pipeline servers
 
 <li>(CI, CD) Disallow SSH access
+</li>
+</ol>
+   </td>
+  </tr>
+</table>
+
+### Execution (Production)
+
+
+<table>
+  <tr>
+   <td>Techniques
+   </td>
+   <td>Description
+   </td>
+   <td>Mitigation
+   </td>
+  </tr>
+  <tr>
+   <td>Modify the configuration of Production environment
+   </td>
+   <td>Modify the configuration of Production environment via stolen credentials
+   </td>
+   <td>
+<ol>
+
+<li>(Secret Manager) Rorate credentials regularly or issue temporary tokens only
+
+<li>(Production environment) Network Restriction to Cloud API
+
+<li>(Production environment) Enable Audit Logging
+
+<li>(Production environment) Security Monitoring of data access
+
+<li>(Production environment) Enforce principle of least privilege to issued credentials
+
+<li>(Production environment) Rate limiting
+</li>
+</ol>
+   </td>
+  </tr>
+  <tr>
+   <td>Deploy modified applications or server images to production environment
+   </td>
+   <td>Deploy modified applications or server images (e.g. container image, function, VM image) to production environment via stolen credentials
+   </td>
+   <td>
+<ol>
+
+<li>(Secret Manager) Rorate credentials regularly or issue temporary tokens only
+
+<li>(Git Repository) Require multi-party approval(peer review)
+
+<li>(Production environment) Verify signature of artifacts
+
+<li>(Production environment) Network Restriction to Cloud API
+
+<li>(Production environment) Enable Audit Logging
+
+<li>(Production environment) Security Monitoring of deployment
+
+<li>(Production environment) Enforce principle of least privilege to issued credentials
+
+<li>(Production environment) Rate limiting
 </li>
 </ol>
    </td>
@@ -636,7 +701,7 @@ Need to set access controls carefully
 
 
 
-### Command and Control/Exfiltration
+### Exfiltration
 
 
 <table>
@@ -646,29 +711,6 @@ Need to set access controls carefully
    <td>Description
    </td>
    <td>Mitigation
-   </td>
-  </tr>
-  <tr>
-   <td>Modify the configuration of Production environment
-   </td>
-   <td>Modify the configuration of Production environment via stolen credentials
-   </td>
-   <td>
-<ol>
-
-<li>(Secret Manager) Rorate credentials regularly or issue temporary tokens only
-
-<li>(Production environment) Network Restriction to Cloud API
-
-<li>(Production environment) Enable Audit Logging
-
-<li>(Production environment) Security Monitoring of data access
-
-<li>(Production environment) Enforce principle of least privilege to issued credentials
-
-<li>(Production environment) Rate limiting
-</li>
-</ol>
    </td>
   </tr>
   <tr>
@@ -753,3 +795,4 @@ Need to set access controls carefully
 ### Supply-chain attacks are the only risk of CI/CD pipeline, correct?
 
 Supply-chain attacks are one of the most serious risks. But it is not the only risk for CI/CD Pipelines. The entire attack surface need to be considered. You can check my slide: “[Attacking and Securing CI/CD Pipeline](https://speakerdeck.com/rung/cd-pipeline)” to know risks of CI/CD pipeline
+
