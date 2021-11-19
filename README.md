@@ -235,7 +235,7 @@ File inclusion: file Function
    <td>
 <ol>
 
-<li>(CI, CD) Code checks by SCA(Security Compliance Associates)
+<li>(CI, CD) Code checks by SCA(Software composition analysis)
 
 <li>(CI, CD) Restrict untrusted libraries, and tools
 
@@ -285,7 +285,7 @@ File inclusion: file Function
    <td>
 <ol>
 
-<li>(Secret Manager) Rorate credentials regularly or issue temporary tokens only
+<li>(Secret Manager) Rotate credentials regularly or issue temporary tokens only
 
 <li>(Production environment) Network Restriction to Cloud API
 
@@ -308,7 +308,7 @@ File inclusion: file Function
    <td>
 <ol>
 
-<li>(Secret Manager) Rorate credentials regularly or issue temporary tokens only
+<li>(Secret Manager) Rotate credentials regularly or issue temporary tokens only
 
 <li>(Git Repository) Require multi-party approval(peer review)
 
@@ -567,7 +567,7 @@ File inclusion: file Function
 
 <li>(Secret Manager) Security Monitoring to detect malicious activity
 
-<li>(Secret Manager) Rorate credentials regularly or issue temporary tokens only
+<li>(Secret Manager) Rotate credentials regularly or issue temporary tokens only
 
 <li>(CI, CD) Enable Audit Logging
 
@@ -592,7 +592,7 @@ File inclusion: file Function
 
 <li>(Secret Manager) Security Monitoring to detect malicious activity
 
-<li>(Secret Manager) Rorate credentials regularly or issue temporary tokens only
+<li>(Secret Manager) Rotate credentials regularly or issue temporary tokens only
 
 <li>(CI, CD) Enable Audit Logging
 
@@ -617,7 +617,7 @@ File inclusion: file Function
 
 <li>(Secret Manager) Security Monitoring to detect malicious activity
 
-<li>(Secret Manager) Rorate credentials regularly or issue temporary tokens only
+<li>(Secret Manager) Rotate credentials regularly or issue temporary tokens only
 
 <li>(CI, CD) Enable Audit Logging
 
