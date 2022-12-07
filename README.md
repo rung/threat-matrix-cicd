@@ -41,7 +41,7 @@ This matrix was created by Mercari Security Team, and reviewed by Platform Team.
 | Git Repository Service | - GitHub, GitLab                                                                                                                    |
 | CI                     | - CI/CD Services (e.g. CircleCI, Cloud Build, Codebuild, GitHub Actions)                                                            |
 | CD                     | - CI/CD Services (e.g. CircleCI, Cloud Build, Codebuild, GitHub Actions) <br>- CD Services (e.g. Spinnaker, ArgoCD)                 |
-| Secret Management      | - Secret Management Services (e.g. AWS Secret Manager, GCP Secret Manager, Hashicorp Vault)                                         |
+| Secret Management      | - Secret Management Services (e.g. AWS Secret Manager, GCP Secret Manager, HashiCorp Vault)                                         |
 | Production environment | - Cloud Services (e.g AWS, Google Cloud, Microsoft Azure) <br>- Other Resources (e.g. Container Registry, Linux Server, Kubernetes) |
 
 
